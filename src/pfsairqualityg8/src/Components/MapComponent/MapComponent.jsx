@@ -34,10 +34,10 @@ const MapComponent = () => {
 
     const defaultProps = {
         center: {
-            lat: 59.95,
-            lng: 30.33
+            lat: 25.362449553498436,
+            lng: -101.88038098051302
         },
-        zoom: 11
+        zoom: 8
     };
 
     //   render() {
@@ -51,21 +51,10 @@ const MapComponent = () => {
                 defaultCenter={defaultProps.center}
                 defaultZoom={defaultProps.zoom}
             >
-            {apiData.map((element, index) => {
-                console.log("element ->", element)
-                return (
-                    <>
-                        <AnyReactComponent
-                            lat={element.lat}
-                            lng={element.lon}
-                            text={`${element.name} ${element.value} ${element.unit}`}
-                        />
-                    </>
-                );
-            })}
+   
             </GoogleMapReact>
 
-            </div>
+        </div>
 
 
     );

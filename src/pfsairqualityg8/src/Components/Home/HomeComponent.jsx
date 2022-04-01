@@ -7,7 +7,9 @@ import Testimony from "../Testimony/Testimony";
 import Header from "../Header/Header";
 import { UserLoggedContext } from "../../utils/UserContext";
 import { useNavigate } from "react-router-dom";
-import MapComponent from "../MapComponent/MapComponent";
+// import MapComponent from "../MapComponent/MapComponent";
+import MarkerInfoWindowGmapsObj from '../MapComponent/MarkerInfoWindowGmapsObj';
+import styled from 'styled-components';
 
 const HomeComponent = () => {
   // eslint-disable-next-line no-unused-vars
@@ -17,7 +19,7 @@ const HomeComponent = () => {
 
   useEffect(() => {
     if (Object.keys(globalUser).length === 0) {
-      alert("inicia sesion");
+      // alert("inicia sesion");
       return navigate("/");
     }
   }, []);
@@ -25,7 +27,9 @@ const HomeComponent = () => {
   return (
     <div className="home-component">
       <Header />
-      <MapComponent />
+      <Wrapper>
+        <MarkerInfoWindowGmapsObj />
+      </Wrapper>
       <Carousell />
       <CardHolder />
       <Testimony />
@@ -34,3 +38,8 @@ const HomeComponent = () => {
 };
 
 export default HomeComponent;
+
+const Wrapper = styled.section`
+  width: 100vw;
+  height: 100vh;
+`;
