@@ -74,8 +74,8 @@ class MarkerInfoWindowGmapsObj extends Component {
     const { places } = this.state;
     const defaultProps = {
       center: {
-        lat: 20.63134888000,
-        lng: -103.416930700
+        lat: 20.6764277,
+        lng: -103.3496092
       },
       zoom: 4
     };
